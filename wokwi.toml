@@ -1,0 +1,6 @@
+[wokwi]
+version = 1
+elf = "./build/esp-button.elf"
+firmware = "./build/esp-button.bin"
+gdbServerPort=3333
+

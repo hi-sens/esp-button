@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "gdbtarget",
+      "request": "attach",
+      "name": "Eclipse CDT GDB Adapter"
+    },
+    {
+      "type": "espidf",
+      "name": "Launch",
+      "request": "launch"
+    },
+    {
+      "name": "Wokwi ESP32 Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/esp-button.elf",
+      "miDebuggerPath": "${command:espIdf.getToolchainGdb}",
+      "cwd": "${workspaceFolder}/main",
+      "stopAtEntry": false,
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerServerAddress": "localhost:3333"
+      
+    }
+
+  ]
+}

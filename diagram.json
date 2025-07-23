@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "ango zhu",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": -48.18, "left": 42.97, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 6.2,
+      "left": -115.2,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 111.8,
+      "left": -105.6,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn1:1.r", "esp:3V3.1", "green", [ "v0" ] ],
+    [ "btn1:2.r", "esp:7", "green", [ "h0" ] ],
+    [ "btn2:1.r", "esp:10", "green", [ "v0" ] ],
+    [ "esp:GND.1", "btn2:2.r", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
